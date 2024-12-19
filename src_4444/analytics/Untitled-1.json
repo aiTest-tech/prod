@@ -1,0 +1,52 @@
+{
+  "data": {
+  "ASR": [
+    {
+      "WTC": {
+        "Total API Hits": 4,
+        "Successful Requests": 4,
+        "Success Rate": 100,
+        "Failed Requests": 0,
+        "Failure Rate": 0,
+        "Total Minutes": 35
+      },
+
+      "JS": {
+        "Total API Hits": 1,
+        "Successful Requests": 1,
+        "Success Rate": 100,
+        "Failed Requests": 0,
+        "Failure Rate": 0
+      }
+    }
+  ],
+  "Sentiment": [
+    {
+      "JS": {
+        "Total API Hits": 1,
+        "Successful Requests": 1,
+        "Success Rate": 100,
+        "Failed Requests": 0,
+        "Failure Rate": 0
+    },
+
+      "WTC": {
+        "Total API Hits": 2,
+        "Successful Requests": 2,
+        "Success Rate": 100,
+        "Failed Requests": 0,
+        "Failure Rate": 0
+      } 
+    }
+  ],
+  "Scrutiny": {
+    "WTC": {
+      "Total API Hits": 1,
+      "Successful Requests": 0,
+      "Success Rate": 0,
+      "Failed Requests": 1,
+      "Failure Rate": 100
+      }
+    }
+  }
+}
