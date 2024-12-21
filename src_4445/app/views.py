@@ -394,39 +394,3 @@ class ProcessAudioViewBase64Input(APIView):
                 {"error": "An unexpected error occurred", "details": str(e)},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
-
-    #  parser_classes = [JSONParser]  # Parse JSON payload
-    # permission_classes = [IsAuthenticated]  # Require authentication
-
-    # def post(self, request):
-    #     print("%%%%%%%%%%%%%%%")
-    #     try:
-    #         # Access raw payload data (bytes)
-    #         raw_payload = request.body
-    #         print("Raw Payload (bytes):", raw_payload)
-
-    #         # Decode raw payload into a string (optional, for readability)
-    #         raw_payload_str = raw_payload.decode("utf-8")
-    #         print("Raw Payload (string):", raw_payload_str)
-
-    #         # Parse JSON payload if it's a JSON request
-    #         parsed_payload = json.loads(raw_payload)
-    #         print("Parsed JSON Payload (dict):", parsed_payload)
-
-    #         # Loop through and print all key-value pairs in the JSON payload
-    #         print("---- All Payload Data ----")
-    #         for key, value in parsed_payload.items():
-    #             print(f"{key}: {value}")
-
-    #         return Response({"message": "Payload printed successfully!"}, status=status.HTTP_200_OK)
-
-    #     except json.JSONDecodeError:
-    #         return Response(
-    #             {"error": "Invalid JSON payload."},
-    #             status=status.HTTP_400_BAD_REQUEST,
-    #         )
-    #     except Exception as e:
-    #         return Response(
-    #             {"error": "An unexpected error occurred.", "details": str(e)},
-    #             status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-    #         )

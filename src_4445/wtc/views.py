@@ -177,14 +177,6 @@ class TextDataView(APIView):
     @swagger_auto_schema(request_body=WTCSerializer)
     def post(self, request):
         # self.permission_classes = [IsAuthenticated]
-        print(">>>>>>>>>> request - get <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ")
-        print("********************************")
-        print("********************************")
-        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$", request.data)
-        print("********************************")
-        print("********************************")
-        print("********************************")
-        print("********************************")
         serializer = WTCSerializer(data=request.data)
         wtc_message = request.data.get('message', 'false')
         wtc_lang = request.data.get('lang', False)
@@ -290,37 +282,6 @@ class TypeDistributionView(APIView):
         )
         return Response(type_distribution)
     
-
-    # # Total counts
-    # total_records = WTC.objects.count()
-    # total_accepted = WTC.objects.filter(Q(lo_sc="accept") | Q(lo_sc_hu="accept")).count()
-    # total_rejected = WTC.objects.filter(Q(lo_sc="reject") | Q(lo_sc_hu="reject")).count()
-
-    # # Machine-generated statistics (lo_sc)
-    # machine_accepted = WTC.objects.filter(lo_sc="accept").count()
-    # machine_rejected = WTC.objects.filter(lo_sc="reject").count()
-
-    # # Accuracy Calculation
-    # machine_decisions = WTC.objects.filter(Q(lo_sc="accept") | Q(lo_sc="reject")).count()
-    # matched_decisions = WTC.objects.filter(
-    #     (Q(lo_sc="accept") & Q(lo_sc_hu="accept")) |
-    #     (Q(lo_sc="reject") & Q(lo_sc_hu="reject"))
-    # ).count()
-
-    # accuracy = (matched_decisions / machine_decisions) * 100 if machine_decisions > 0 else 0
-
-    # # Context for the template
-    # context = {
-    #     # "total_records": total_records,
-    #     "total_accepted": total_accepted,
-    #     "total_rejected": total_rejected,
-    #     "machine_accepted": machine_accepted,
-    #     "machine_rejected": machine_rejected,
-    #     "accuracy": round(accuracy, 2),
-    # }
-
-    # return render(request, "wtc_statistics.html", context)
-
 class WTCStatisticsAPIView(APIView):
     """
     API View to calculate and return WTC statistics.

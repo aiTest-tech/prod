@@ -14,6 +14,4 @@ urlpatterns = [
     path('wtc/type-distribution/', TypeDistributionView.as_view(), name='type-distribution'),
     path('wtc/scrutiny-statistics/', WTCStatisticsAPIView.as_view(), name='wtc_statistics_api'),
 
-
-
 ]
